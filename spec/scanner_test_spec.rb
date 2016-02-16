@@ -5,7 +5,7 @@ describe Dem  do
 		@dem = Dem.new("test","192.168.1.1",'23')
 	end
 
-	if 'has a connection name is' do
+	it 'has a connection name is' do
 		expect(@dem.name).to eql('test')
 	end
 end
