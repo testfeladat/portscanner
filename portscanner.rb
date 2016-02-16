@@ -11,9 +11,9 @@ ports = 10..30
 
 ports.each do |sc|
 	begin
-		Timeout::timeout(10){TCPSocket.new("#{ip}")}
+		Timeout::timeout(5){ TCPSocket.new("#{ip}",sc)}
 	rescue
-		CSV.open("resoult.csv","a+") do |csv|
+		CSV.open("resoult.csv","a+") do |cssv|
 			csv << ["Timestamp","IP-addr","Port", "Open/Closed"]
 			csv << ["#{Time.now}","#{ip}","#{sc}", "Closed"]
 		end
