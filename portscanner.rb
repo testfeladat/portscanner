@@ -8,7 +8,11 @@ puts "The app scenner ports between 10 and 30 and write data in csv file "
 print "Write in the IP Address or domain to scan:"
 
 ip = gets.chomp
-ports= 10..30
+print "Write in the begin port:"
+port1= gets.chomp
+print "Write in the end port:"
+port2= gets.chomp
+ports = port1..port2
 
 ports.each do |sc|
   begin
